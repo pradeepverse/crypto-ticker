@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"app-container\">\n  <h1 class=\"app-header\"> \n    <a  class=\"no-style-href mylogo\" href=\"https://www.youtube.com/knowinminutes\" target=\"_blank\">\n      <img src=\"../assets/knowinmins.PNG\"/>\n    </a>\n    <span> Track Your Cryptocurrencies <span class=\"live-tag\">LIVE</span> </span>\n    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"drop-down-icon\">\n      <!-- <mat-icon>more_vert</mat-icon> -->\n      <span matTooltip=\"Choose cryptos based on your interest\">\n        <mat-icon>arrow_drop_down</mat-icon>\n      </span>\n    </button>\n  </h1> \n  <ul class=\"header-separator\"></ul>\n  <mat-menu #menu=\"matMenu\">\n      <mat-checkbox (click)=\"$event.stopPropagation()\" *ngFor=\"let cryptoConstant of cryptoConstants\">\n        {{cryptoConstant.name}}\n      </mat-checkbox>\n  </mat-menu>\n  <div class=\"elements-holder\">\n    <a class=\"no-style-href\" href=\"{{cryptoConstant?.site}}\" target=\"_blank\"\n    *ngFor=\"let cryptoConstant of cryptoConstants\">\n      <app-coin-element [cryptoDetail] = \"cryptoConstant\"></app-coin-element>\n    </a> \n  </div>\n</div>\n"
+module.exports = "<div class=\"app-container\">\n  <h1 class=\"app-header\"> \n    <a  class=\"no-style-href mylogo\" href=\"https://www.youtube.com/knowinminutes\" target=\"_blank\">\n      <img src=\"../assets/knowinmins.png\"/>\n    </a>\n    <span> Track Your Cryptocurrencies <span class=\"live-tag\">LIVE</span> </span>\n    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"drop-down-icon\">\n      <!-- <mat-icon>more_vert</mat-icon> -->\n      <span matTooltip=\"Choose cryptos based on your interest\">\n        <mat-icon>arrow_drop_down</mat-icon>\n      </span>\n    </button>\n  </h1> \n  <ul class=\"header-separator\"></ul>\n  <mat-menu #menu=\"matMenu\">\n      <mat-checkbox (click)=\"$event.stopPropagation()\" *ngFor=\"let cryptoConstant of cryptoConstants\">\n        {{cryptoConstant.name}}\n      </mat-checkbox>\n  </mat-menu>\n  <div class=\"elements-holder\">\n    <a class=\"no-style-href\" href=\"{{cryptoConstant?.site}}\" target=\"_blank\"\n    *ngFor=\"let cryptoConstant of cryptoConstants\">\n      <app-coin-element [cryptoDetail] = \"cryptoConstant\"></app-coin-element>\n    </a> \n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -200,7 +200,6 @@ var CoinElementComponent = (function () {
                 _this.saveLastPrice();
             }
             _this.lastPriceTemp = _this.crypto.price_usd;
-            console.log('Fetched!');
         });
         __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["a" /* Observable */].interval(1000 * 30).subscribe(function (x) {
             _this.CryptoService.fetchFromEndPoint(_this.cryptoDetail.api).subscribe(function (data) {
@@ -209,7 +208,6 @@ var CoinElementComponent = (function () {
                     _this.saveLastPrice();
                 }
                 _this.lastPriceTemp = _this.crypto.price_usd;
-                console.log('Fetched!');
             });
         });
     };
