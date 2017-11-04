@@ -162,7 +162,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/coin-element/coin-element.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card>\n  <div class=\"heading\">\n    <span> {{crypto?.name}} </span>\n    <div class=\"{{cryptoDetail?.className}}\"></div>\n  </div>\n  <ul></ul>\n  <div class=\"price\">\n    <span class=\"label\"> Price: </span>\n    <span class=\"value\"> {{crypto?.price_usd | currency}} </span>\n    <mat-icon class=\"green\" *ngIf=\"crypto?.price_usd > lastPrice\">arrow_drop_up</mat-icon>\n    <mat-icon class=\"red\" *ngIf=\"crypto?.price_usd < lastPrice\">arrow_drop_down</mat-icon>\n  </div>\n  <div class=\"last-price\">\n    <span> Last Price: </span>\n    <span class=\"value\"> {{lastPrice | currency}} </span>\n  </div>\n  <div class=\"daily-change\">\n    <span class=\"label\"> 24H Change: </span>\n    <span [ngClass]=\"{'value up': crypto?.percent_change_24h > 0, \n                      'value down': crypto?.percent_change_24h < 0}\"> \n      {{crypto?.percent_change_24h}}% \n    </span>\n  </div>\n\n  <div class=\"m-cap\">\n    <span class=\"label\"> M-Cap: </span>\n    <span class=\"value\"> {{crypto?.market_cap_usd | currency}} </span>\n  </div>\n</mat-card>"
+module.exports = "<mat-card>\n  <div class=\"heading\">\n    <span> {{crypto?.name}} </span>\n    <div class=\"{{cryptoDetail?.className}}\"></div>\n  </div>\n  <ul></ul>\n  <div class=\"price\">\n    <span class=\"label\"> Price: </span>\n    <span class=\"value\"> {{crypto?.price_usd | currency}} </span>\n    <mat-icon class=\"green\" *ngIf=\"crypto?.price_usd > lastPrice\">arrow_drop_up</mat-icon>\n    <mat-icon class=\"red\" *ngIf=\"crypto?.price_usd < lastPrice\">arrow_drop_down</mat-icon>\n  </div>\n  <div class=\"last-price\">\n    <span> Last Price: </span>\n    <span class=\"value\" *ngIf=\"lastPrice != null && lastPrice != crypto?.price_usd\"> {{lastPrice | currency}} </span>\n    <span class=\"value\" *ngIf=\"lastPrice == crypto?.price_usd\"> Waiting for market update... </span>\n  </div>\n  <div class=\"daily-change\">\n    <span class=\"label\"> 24H Change: </span>\n    <span [ngClass]=\"{'value up': crypto?.percent_change_24h > 0, \n                      'value down': crypto?.percent_change_24h < 0}\"> \n      {{crypto?.percent_change_24h}}% \n    </span>\n  </div>\n\n  <div class=\"m-cap\">\n    <span class=\"label\"> M-Cap: </span>\n    <span class=\"value\"> {{crypto?.market_cap_usd | currency}} </span>\n  </div>\n</mat-card>"
 
 /***/ }),
 
@@ -213,7 +213,7 @@ var CoinElementComponent = (function () {
     };
     CoinElementComponent.prototype.saveLastPrice = function () {
         if (this.lastPrice == null) {
-            this.lastPrice = parseFloat(this.crypto.price_usd) + (parseFloat(this.crypto.price_usd) * parseFloat(this.crypto.percent_change_1h) / 100);
+            this.lastPrice = this.crypto.price_usd;
         }
         else {
             this.lastPrice = this.lastPriceTemp;
