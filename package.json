@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --base-href 'https://pradeeprajr93.github.io/crypto-ticker'"
+    "deploy": "ng build --base-href 'https://pradeeprajr93.github.io/crypto-ticker/'"
   },
   "private": true,
   "dependencies": {
