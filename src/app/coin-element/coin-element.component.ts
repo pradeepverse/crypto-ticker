@@ -19,7 +19,6 @@ export class CoinElementComponent implements OnInit {
         this.saveLastPrice();
       }
       this.lastPriceTemp = this.crypto.price_usd;
-      console.log('Fetched!');
     });
     Observable.interval(1000 * 30).subscribe(x => {
       this.CryptoService.fetchFromEndPoint(this.cryptoDetail.api).subscribe(data => {
@@ -28,7 +27,6 @@ export class CoinElementComponent implements OnInit {
           this.saveLastPrice();
         }
         this.lastPriceTemp = this.crypto.price_usd;
-        console.log('Fetched!');
     });
     });
   }
