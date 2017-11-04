@@ -1,0 +1,29 @@
+<mat-card>
+  <div class="heading">
+    <span> {{crypto?.name}} </span>
+    <div class="btc-logo-sprite crypto-logo"></div>
+  </div>
+  <ul></ul>
+  <div class="price">
+    <span class="label"> Price: </span>
+    <span class="value"> {{crypto?.price_usd | currency}} </span>
+    <mat-icon class="green" *ngIf="crypto?.price_usd > lastPrice">arrow_drop_up</mat-icon>
+    <mat-icon class="red" *ngIf="crypto?.price_usd < lastPrice">arrow_drop_down</mat-icon>
+  </div>
+  <div class="last-price">
+    <span> Last Price: </span>
+    <span class="value"> {{lastPrice | currency}} </span>
+  </div>
+  <div class="daily-change">
+    <span class="label"> 24H Change: </span>
+    <span [ngClass]="{'value up': crypto?.percent_change_24h > 0, 
+                      'value down': crypto?.percent_change_24h < 0}"> 
+      {{crypto?.percent_change_24h}}% 
+    </span>
+  </div>
+
+  <div class="m-cap">
+    <span class="label"> M-Cap: </span>
+    <span class="value"> {{crypto?.market_cap_usd | currency}} </span>
+  </div>
+</mat-card>

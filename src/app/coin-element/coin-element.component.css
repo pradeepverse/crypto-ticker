@@ -1,0 +1,97 @@
+:host{
+    display: flex;
+    padding: 22px;
+    justify-content: space-evenly;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+.heading > span{
+    width: calc(100% - 16px);
+}
+
+
+.label{
+    opacity: 0.75;
+}
+
+ul{
+    border: 1px solid;
+}
+
+.price{
+    font-size: 24px;
+}
+
+.price .value{
+    font-weight: bold;
+}
+
+.last-price{
+    opacity: 0.6;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+mat-icon{
+    font-size: 40px;
+    position: relative;
+    top: 13px;
+}
+
+mat-icon.green{
+    color: green;
+}
+
+mat-icon.red{
+    color: red;
+}
+
+.daily-change{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.m-cap{
+    padding: 10px 0 6px 25px;
+    background: rgb(226, 226, 226);
+    color: black;
+    margin: 1px -24px 0 -24px;
+    border-top: 1px solid;
+}
+
+.up{
+    color: green;
+}
+.down{
+    color: red;
+}
+
+.crypto-logo{
+    display: inline-block;
+    background-image: url(../../assets/cryptoicons.png);
+    -webkit-background-size: 190px 160px;
+    -moz-background-size: 190px 160px;
+    background-size: 190px 160px;
+}
+
+.btc-logo-sprite {
+    background-position: -64px -144px;
+    width: 16px;
+    height: 16px;
+}
+
+
+
+.mat-card{
+    padding-bottom: 0px;
+    width: 215px;
+}
+
+.mat-card > div {
+    
+}

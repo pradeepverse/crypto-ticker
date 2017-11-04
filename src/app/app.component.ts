@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CryptoService } from './crypto-service.service';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  cryptoConstants: any;
+
+  constructor(private crytoService: CryptoService){ 
+  }
+
+  ngOnInit(): void{
+    this.cryptoConstants = this.crytoService.getCryptoConstants();
+    this.crytoService.getDefaultCryptoDetails();
+  }
+  
 }

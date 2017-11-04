@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arimo', sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background: #f1f1f1;
+}
+
+.mat-menu-content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.mat-checkbox-layout{
+    padding: 10px;
+    display: block;
+}
+
+mat-checkbox{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background{
+    background-color: #635897;
+}
+
+.mat-checkbox-ripple.mat-ripple{
+    display: none;
+}
