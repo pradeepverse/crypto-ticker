@@ -12,7 +12,8 @@
   </div>
   <div class="last-price">
     <span> Last Price: </span>
-    <span class="value"> {{lastPrice | currency}} </span>
+    <span class="value" *ngIf="lastPrice != null && lastPrice != crypto?.price_usd"> {{lastPrice | currency}} </span>
+    <span class="value" *ngIf="lastPrice == crypto?.price_usd"> Waiting for change... </span>
   </div>
   <div class="daily-change">
     <span class="label"> 24H Change: </span>

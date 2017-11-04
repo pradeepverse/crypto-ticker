@@ -33,7 +33,7 @@ export class CoinElementComponent implements OnInit {
 
   saveLastPrice(): void{
     if(this.lastPrice == null){
-      this.lastPrice = parseFloat(this.crypto.price_usd) + (parseFloat(this.crypto.price_usd) * parseFloat(this.crypto.percent_change_1h)/100);
+      this.lastPrice = this.crypto.price_usd;
     } else {
       this.lastPrice = this.lastPriceTemp;
     }
