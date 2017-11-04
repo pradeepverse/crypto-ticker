@@ -18,7 +18,7 @@
       </mat-checkbox>
   </mat-menu>
   <div class="elements-holder">
-    <a class="no-style-href" href="https://coinmarketcap.com/currencies/bitcoin/" target="_blank"
+    <a class="no-style-href" href="{{cryptoConstant?.site}}" target="_blank"
     *ngFor="let cryptoConstant of cryptoConstants">
       <app-coin-element [cryptoDetail] = "cryptoConstant"></app-coin-element>
     </a> 
