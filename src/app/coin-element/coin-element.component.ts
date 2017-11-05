@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CryptoService } from './../crypto-service.service';
-import { Observable } from 'rxjs/Rx';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/observable/interval';
 
 
 @Component({
