@@ -2,10 +2,10 @@
     "dir": "ltr",
     "lang": "en",
     "name": "Crypto Ticker",
-    "scope": "/",
+    "scope": "/crypto-ticker/",
     "display": "standalone",
     "start_url": "/index.html",
-    "short_name": "CT",
+    "short_name": "Crypto Ticker",
     "icons": [
         {
         "src": "knowinmins256.png",
@@ -21,7 +21,7 @@
     "theme_color": "#72e8d0",
     "description": "Your favorite Real-time cryto ticker",
     "orientation": "any",
-    "background_color": "#3a1c8d",
+    "background_color": "#f2f2f2",
     "related_applications": [],
     "prefer_related_applications": false
 }
