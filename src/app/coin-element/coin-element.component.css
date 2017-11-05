@@ -90,8 +90,16 @@ mat-icon.red{
     width: 215px;
 }
 
-.mat-card > div {
-    
+@media only screen and (max-width: 600px) {
+    .m-cap{
+        padding: 10px 0 6px 0px;
+        background: white;
+        margin: 0;
+    }
+
+    .mat-card{
+        border-bottom: 5px solid #d0d0d0;
+    }
 }
 
 .s-s-zencash {
