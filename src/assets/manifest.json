@@ -4,7 +4,7 @@
     "name": "Crypto Ticker",
     "scope": "/crypto-ticker/",
     "display": "standalone",
-    "start_url": "/index.html",
+    "start_url": "/crypto-ticker/index.html",
     "short_name": "Crypto Ticker",
     "icons": [
         {
