@@ -1,6 +1,7 @@
 # CryptoTicker
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
+Check live preview [here.](https://pradeeprajr93.github.io/crypto-ticker/)
 
 ## Development server
 
