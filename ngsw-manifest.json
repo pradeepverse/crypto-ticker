@@ -7,16 +7,16 @@
       "/sw-register.6819cd2c5fa25470ecf2.bundle.js": "50d549edfbd188ed199d8d0b079afa593202e3ea",
       "/inline.a9cf0fce4402858a92ea.bundle.js": "c6b79d0a40c3783426e55e7b08fdc846b407b9b4",
       "/styles.9c6d9a6bb45497941a34.bundle.css": "8eff54ee7fb133f722edd37b781baf69e58da863",
-      "/assets/cryptoicons.png": "8c2bba7bfa7bcd5a18c20fdef6d5d53e72dfeb25",
-      "/assets/favicon.ico": "e669733ce62711dd6b6b357aff16ee200b505db1",
-      "/assets/github.png": "6269a61771349a5103a51ad1463176eb2950ad45",
       "/assets/knowinmins.png": "bb847c57a44d9a839a33079ec2974df56776cb48",
-      "/assets/knowinmins256.png": "ec066ba6583d62d302450fa88123eca5c6b63f20",
+      "/assets/favicon.ico": "e669733ce62711dd6b6b357aff16ee200b505db1",
+      "/assets/cryptoicons.png": "8c2bba7bfa7bcd5a18c20fdef6d5d53e72dfeb25",
+      "/assets/github.png": "6269a61771349a5103a51ad1463176eb2950ad45",
       "/assets/knowinmins512.png": "3dc75850ac772abd11b6f5420043e44300ee1269",
       "/assets/manifest.json": "c5c5e41b3b47cca7c28e4a234762786ff101c6ed",
+      "/assets/knowinmins256.png": "ec066ba6583d62d302450fa88123eca5c6b63f20",
       "/assets/twitter.png": "b1ee41a4b4aba9a1b25f18103481db52f73ca208",
       "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-      "/index.html": "3de4996ce4901365d91915a1c0299ff399fd23f0"
+      "/index.html": "e5cfddcf44716097fe5902e6eb49afa4c776e7c2"
     },
     "_generatedFromWebpack": true
   }
